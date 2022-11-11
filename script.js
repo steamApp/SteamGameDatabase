@@ -41,12 +41,9 @@ steamApp.displayGame = (gamesList) => {
         const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
-        steamApp.gamingPlatforms(gamesList);
         
     });
-
-
-
+    steamApp.gamingPlatforms(gamesList);
 }
 
 steamApp.gamingPlatforms = (gamesReturned) => {
@@ -60,19 +57,12 @@ steamApp.gamingPlatforms = (gamesReturned) => {
             plats.innerHTML = '<p>Available on all platforms</p>'
             console.log("works on EVERYTHING")
         } else {
-            console.log("it does not!🗿")
+            console.log("it does not!")
         }
     });
     
     
 }
-
-
-
-
-
-
-
 
 
 
