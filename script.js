@@ -6,7 +6,7 @@ steamApp.storeSearch = () => {
 
 
     url.search = new URLSearchParams({
-        term: "star wars",
+        term: "portal",
         l: "english",
         cc: "CA",
     })
@@ -21,6 +21,7 @@ steamApp.storeSearch = () => {
 }
 
 steamApp.displayGame = (gamesList) => {
+    console.log(gamesList)
     gamesList.forEach((game) => {
         const newLiElement = document.createElement('li');
         newLiElement.innerHTML = `
@@ -37,12 +38,42 @@ steamApp.displayGame = (gamesList) => {
             }
         }
         getPrice(game);
-        const gamesUl = document.querySelector('.list');
+        const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
         steamApp.gamingPlatforms(gamesList);
+        
     });
+
+
+
 }
+
+steamApp.gamingPlatforms = (gamesReturned) => {
+    const plats = document.createElement('p');
+    const gamesUl = document.querySelector('.gamesUl')
+    gamesUl.append(plats);
+
+    gamesReturned.forEach(platformsList => {
+        const platformsArray = platformsList.platforms
+        if ((platformsArray.windows === true) && (platformsArray.mac === true) && (platformsArray.linux === true)) {
+            plats.innerHTML = '<p>Available on all platforms</p>'
+            console.log("works on EVERYTHING")
+        } else {
+            console.log("it does not")
+        }
+    });
+    
+    
+}
+
+
+
+
+
+
+
+
 
 
 steamApp.init = () => {
