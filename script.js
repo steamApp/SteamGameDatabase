@@ -60,7 +60,7 @@ steamApp.gamingPlatforms = (gamesReturned) => {
             plats.innerHTML = '<p>Available on all platforms</p>'
             console.log("works on EVERYTHING")
         } else {
-            console.log("it does not!")
+            console.log("it does not!🗿")
         }
     });
     
