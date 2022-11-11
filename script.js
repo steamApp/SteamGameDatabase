@@ -6,7 +6,7 @@ steamApp.storeSearch = () => {
 
 
     url.search = new URLSearchParams({
-        term: "portal",
+        term: "star wars",
         l: "english",
         cc: "CA",
     })
@@ -23,13 +23,17 @@ steamApp.storeSearch = () => {
 steamApp.displayGame = (gamesList) => {
     console.log(gamesList)
     gamesList.forEach((game) => {
+
         const newLiElement = document.createElement('li');
+        newLiElement.classList.add('newLiElement');
         newLiElement.innerHTML = `
         <img src=${game.tiny_image} alt=${game.name} />
         <h2>${game.name}</h2>
+        <ul class="platformsUl"></ul>
         `;
 
         const gamePriceEl = document.createElement('p');
+        newLiElement.classList.add('gamesLi')
         const getPrice = (gamePrice) => {
             if (gamePrice.price) {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}">${game.price.final}</a>`;
@@ -42,26 +46,41 @@ steamApp.displayGame = (gamesList) => {
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
         
+
     });
     steamApp.gamingPlatforms(gamesList);
 }
 
+
 steamApp.gamingPlatforms = (gamesReturned) => {
-    const plats = document.createElement('p');
-    const gamesUl = document.querySelector('.gamesUl')
-    gamesUl.append(plats);
+    const windowsIcon = document.createElement('li')
+    const macIcon = document.createElement('li')
+    const linuxIcon = document.createElement('li')
+
+    const platformsUl = document.querySelector('.platformsUl')
+    platformsUl.append(windowsIcon, macIcon, linuxIcon)
 
     gamesReturned.forEach(platformsList => {
-        const platformsArray = platformsList.platforms
-        if ((platformsArray.windows === true) && (platformsArray.mac === true) && (platformsArray.linux === true)) {
-            plats.innerHTML = '<p>Available on all platforms</p>'
-            console.log("works on EVERYTHING")
+        const platformsArray = platformsList.platforms;
+        const platformsUl = document.createElement('ul');
+        platformsUl.classList.add('platformsUl');
+        if (platformsArray.windows === true) {
+            windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
+            
         } else {
-            console.log("it does not!")
+            windowsIcon.innerHTML = ''
+        }
+        if (platformsArray.mac === true) {
+            macIcon.innerHTML = '<i class="fa-brands fa-apple"></i>'
+        } else {
+            macIcon.innerHTML = ''
+        }
+        if (platformsArray.linux === true) {
+            macIcon.innerHTML = '<i class="fa-brands fa-linux"></i>'
+        } else {
+            macIcon.innerHTML = ''
         }
     });
-    
-    
 }
 
 
