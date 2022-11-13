@@ -226,6 +226,22 @@ html {
   overflow: hidden;
 }
 
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  z-index: 30;
+  background: white;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 0;
+}
+
+.skipLink:focus {
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 ul {
   list-style: none;
   border: 1px solid rebeccapurple;
