@@ -6,7 +6,7 @@ steamApp.storeSearch = () => {
 
 
     url.search = new URLSearchParams({
-        term: "star wars",
+        term: "portal",
         l: "english",
         cc: "CA",
     })
@@ -23,14 +23,15 @@ steamApp.storeSearch = () => {
 steamApp.displayGame = (gamesList) => {
     console.log(gamesList)
     gamesList.forEach((game) => {
+        console.log(game)
 
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
         newLiElement.innerHTML = `
         <img src=${game.tiny_image} alt=${game.name} />
         <h2>${game.name}</h2>
-        <ul class="platformsUl"></ul>
         `;
+        
 
         const gamePriceEl = document.createElement('p');
         const getPrice = (gamePrice) => {
@@ -44,71 +45,43 @@ steamApp.displayGame = (gamesList) => {
         const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
-        
 
-    });
-    steamApp.gamingPlatforms(gamesList);
-}
-
-
-steamApp.gamingPlatforms = (gamesReturned) => {
-    
-    gamesReturned.forEach(platformsList => {
-
-        const platformsUl = document.querySelector('.platformsUl')
+        const platformsUl = document.createElement('ul')
         platformsUl.classList.add('platformsUl');
         const windowsIcon = document.createElement('li')
         const macIcon = document.createElement('li')
         const linuxIcon = document.createElement('li')
-        // platformsUl.append(windowsIcon, macIcon, linuxIcon)
-        const platformsArray = platformsList.platforms;
-        // const platformsUl = document.createElement('ul');
-        
-        if (platformsArray.windows === true) {            
+
+        if (game.platforms.windows === true) {
             windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
-            // platformsUl.append(windowsIcon);
-            platformsList.forEach((platformArray) => {
-                console.log(platformArray)
-            });
+            platformsUl.append(windowsIcon);
+            console.log('windows')
         } else {
-            windowsIcon.innerHTML = ''
+            // windowsIcon.innerHTML = 'doesnt work'
         }
-        if (platformsArray.mac === true) {
+        if (game.platforms.mac === true) {
             macIcon.innerHTML = '<i class="fa-brands fa-apple"></i>'
-            // platformsUl.append(macIcon);
+            platformsUl.append(macIcon);
+            console.log('mac')
 
         } else {
-            macIcon.innerHTML = 'this doesnt work rn'
+            // macIcon.innerHTML = 'this doesnt work rn'
             // platformsUl.append(macIcon);
         }
-        if (platformsArray.linux === true) {
+        if (game.platforms.linux === true) {
             linuxIcon.innerHTML = '<i class="fa-brands fa-linux"></i>'
-            // platformsUl.append(linuxIcon);
+            platformsUl.append(linuxIcon);
+            console.log('linux')
 
         } else {
-            linuxIcon.innerHTML = ''
+            // platformsUl.append(linuxIcon);
+            // linuxIcon.innerHTML = 'this doesnt work rn'
         }
-        platformsUl.append(windowsIcon, macIcon, linuxIcon)
+
+        newLiElement.append(platformsUl)
+
     });
-
-    // Deal with inner HTML
-    // 
-    // steamApp.checkingPlatforms = () =>{
-        for(let i = 0; i < gamesReturned.length; i++){
-            console.log(gamesReturned[i])
-            if(gamesReturned[i][metascore]){
-                console.log(gamesReturned[i])
-            } else {
-                console.log(`${gamesReturned[i]} doesn't have a metascore`)
-            }
-        }
-    }
-
-    // checkingPlatforms();
-
-// }
-
-
+}
 
 steamApp.init = () => {
     steamApp.storeSearch();
