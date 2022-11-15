@@ -1,0 +1,27 @@
+@use "./variables";
+
+h1,
+h2,
+p,
+a{
+    font-family: 'Anybody', cursive;
+    color: variables.$p3Blue;
+}
+
+
+
+.navHeader{
+
+}
+
+.mainHeader{
+
+}
+
+.navItem{
+
+}
+
+.footer{
+    text-decoration: none;
+}

@@ -7,19 +7,43 @@
     <script src="https://kit.fontawesome.com/1015bcb745.js" crossorigin="anonymous"></script>
     <title>Document</title>
     <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
+
     <header>
         <div class="wrapper">
+            <nav class="navBar">
+                <h2 class="navLogo navHeader">Steam App</h2>
+                <ul class="navUlItems">
+                    <li><a href="#" class="navItem">Language</a></li>
+                    <li><a href="#" class="navItem">Currency</a></li>
+                    <li><a href="#" class="navItem">Cart</a></li>
+                </ul>
+            </nav> <!-- End of nav-->
+        </div>
+
+        <div class="slideOutNav">
+            <div class="navCloseButton">
+                <button>
+                    <!-- i -->
+                </button>
+            </div>
+
             <nav>
-                <h2>Steam App</h2>
                 <ul>
                     <li><a href="#">Language</a></li>
                     <li><a href="#">Currency</a></li>
                     <li><a href="#">Cart</a></li>
                 </ul>
             </nav>
+        </div> <!-- End of slide out nav -->
+    
+        <div class="wrapper h1Container">
+            <h1 class="mainHeader">Welcome to our website!</h1>
         </div>
     </header>
     
@@ -29,8 +53,8 @@
         </ul>
     </section>
     <footer>
-        <div class="wrapper">
-            <p><a href="https://junocollege.com/">Created at Juno College</a></p>
+        <div class="wrapper footerContainer">
+            <p><a href="https://junocollege.com/" class="footer">Created at Juno College</a></p>
         </div>
     </footer>
     <script src="./script.js"></script>
