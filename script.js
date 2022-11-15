@@ -3,27 +3,38 @@ const steamApp = {};
 steamApp.storeSearch = () => {
 
     const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
+    
+    
+        const formElement = document.querySelector('form')
+        formElement.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const inputElement = document.querySelector('input');
+            const userSearch = inputElement.value;
 
+            url.search = new URLSearchParams({
+                term: userSearch,
+                l: "english",
+                cc: "CA",
+            })
+        
+            fetch(url)
+                .then((res) => {
+                    return res.json();
+                })
+                .then((data) => {
+                    steamApp.displayGame(data.items);
+                })
 
-    url.search = new URLSearchParams({
-        term: "portal",
-        l: "english",
-        cc: "CA",
-    })
-
-    fetch(url)
-        .then((res) => {
-            return res.json();
+            inputElement.value = ''
         })
-        .then((data) => {
-            steamApp.displayGame(data.items);
-        })
+
+
 }
 
 steamApp.displayGame = (gamesList) => {
-    console.log(gamesList)
+    // console.log(gamesList)
     gamesList.forEach((game) => {
-        console.log(game)
+        // console.log(game)
 
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
@@ -55,14 +66,12 @@ steamApp.displayGame = (gamesList) => {
         if (game.platforms.windows === true) {
             windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
             platformsUl.append(windowsIcon);
-            console.log('windows')
         } else {
             // windowsIcon.innerHTML = 'doesnt work'
         }
         if (game.platforms.mac === true) {
             macIcon.innerHTML = '<i class="fa-brands fa-apple"></i>'
             platformsUl.append(macIcon);
-            console.log('mac')
 
         } else {
             // macIcon.innerHTML = 'this doesnt work rn'
@@ -71,7 +80,6 @@ steamApp.displayGame = (gamesList) => {
         if (game.platforms.linux === true) {
             linuxIcon.innerHTML = '<i class="fa-brands fa-linux"></i>'
             platformsUl.append(linuxIcon);
-            console.log('linux')
 
         } else {
             // platformsUl.append(linuxIcon);
@@ -82,6 +90,17 @@ steamApp.displayGame = (gamesList) => {
 
     });
 }
+
+
+
+
+// steamApp.getUserInput = () => {
+//     document.querySelector('form').addEventListener('submit', function () {
+//         const userSearch = this.value;
+//         steamApp.storeSearch(userSearch);
+//         console.log(userSearch)
+//     })
+// }
 
 steamApp.init = () => {
     steamApp.storeSearch();
