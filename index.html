@@ -20,7 +20,16 @@
                 <h2 class="navLogo navHeader">Steam App</h2>
                 <ul class="navUlItems">
                     <li><a href="#" class="navItem">Language</a></li>
-                    <li><a href="#" class="navItem">Currency</a></li>
+                    <li>
+                        <form action="" href="#" class="navItem" id="currencyForm">
+                            <label for="currency">Currency</label>
+                            <select name="currency" id="currency">
+                                <option value='"CA"'>CAD</option>
+                                <option value="US">USD</option>
+                                <option value="GB">GBP</option>
+                            </select>
+                        </form>
+                    </li>
                     <li><a href="#" class="navItem">Cart</a></li>
                 </ul>
             </nav> <!-- End of nav-->
@@ -49,7 +58,7 @@
     
     <main id="mainContent">
         <section>
-            <form action="#">
+            <form action="#" id="searchBar">
                 <label for="search">Search:</label>
                 <input type="search" id="search" name="search">
 

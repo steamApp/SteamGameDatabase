@@ -2,13 +2,18 @@ const steamApp = {};
 
 steamApp.storeSearch = () => {
 
-    const formElement = document.querySelector('form')
+    const formElement = document.querySelector('#searchBar')
     formElement.addEventListener('submit', function (event) {
         event.preventDefault();
         const inputElement = document.querySelector('input');
         const userSearch = inputElement.value;
 
+        const currency = document.querySelector('#currencyForm');
+        // currency.addEventListener('change', () =>{
+            const chosenCurrency = currency.value;
+            console.log(chosenCurrency);
 
+        
 
     const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
     
@@ -24,10 +29,12 @@ steamApp.storeSearch = () => {
                 })
                 .then((data) => {
                     steamApp.displayGame(data.items);
+                    // console.log(data.items);
                 })
-
+            
             inputElement.value = ''
-        })
+        
+    })
 }
 
 steamApp.displayGame = (gamesList) => {
