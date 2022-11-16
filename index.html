@@ -15,9 +15,9 @@
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
 
     <header>
-        <div class="wrapper">
-            <nav class="navBar">
-                <h2 class="navLogo navHeader">Steam App</h2>
+        <nav class="navBar">
+            <div class="wrapper navFlex">
+                <h2 class="navLogo">Steam App</h2>
                 <ul class="navUlItems">
                     <li><a href="#" class="navItem">Language</a></li>
                     <li>
@@ -32,8 +32,8 @@
                     </li>
                     <li><a href="#" class="navItem">Cart</a></li>
                 </ul>
-            </nav> <!-- End of nav-->
-        </div>
+            </div>
+        </nav> <!-- End of nav-->
 
         <div class="slideOutNav">
             <div class="navCloseButton">
@@ -57,16 +57,35 @@
     </header>
     
     <main id="mainContent">
-        <section>
-            <form action="#" id="searchBar">
-                <label for="search">Search:</label>
-                <input type="search" id="search" name="search">
+        <section class="formSection">
+            <div class="wrapper">
+                <form action="#" id="searchBar">
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search">
+    
+                </form>
+            </div>
+        </section>
 
-            </form>
+        <section class="gamesSection">
+            <div class="wrapper">
+                <ul class="gamesUl">
+                    <!-- JS Pseudo Code -->
+                    <!-- <li class="newLiElement">
+                        <img src="" alt="">
+                        <h2></h2>
+                        <p>
+                            <a href=""></a>
+                        </p>
+                        <ul class="platformsUl">
+                            <li><i>Windows Icon</i></li>
+                            <li><i>Mac Icon</i></li>
+                            <li><i></i>Linux Icon</li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </div>
 
-            <ul class="gamesUl">
-                <!--JS STUFFS  -->
-            </ul>
         </section>
     </main>
 

@@ -1,8 +1,8 @@
 @use "./variables";
 
-body{
-    background-color: variables.$p1BabyGreen;
-}
+// body{
+//     background-color: variables.$darkBlue;
+// }
 
 .wrapper{
     width: 80%;
@@ -14,28 +14,6 @@ ul{
     list-style: none;
 }
 
-.platformsUl{
-    padding: 0;
-}
-
-.platformsUl li{
-    // border: 1px solid green;
-}
-
-.h1Container{
-    display: flex;
-    justify-content: center;
-    h1{
-    }
-}
 
 
-// footer
-footer{
-    background-color: variables.$p1TeaGreen;
-    padding: 1% 0;
-    .footerContainer{
-        display: flex;
-        justify-content: center;
-    }
-}
+
