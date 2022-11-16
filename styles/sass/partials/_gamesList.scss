@@ -1,32 +1,51 @@
 @use "./variables";
 
 .gamesUl {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 100px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px auto;
+    gap: 50px;
         .newLiElement {
+            width: calc((100% /2) - 100px);
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
             align-items: center;
-            padding: 20px;
-                img {
-                    // images are TOO SMALL and therefore BLURRY
-                    width: 50%;
+            justify-content: space-evenly;
+            padding: 20px 0;
+            border: 2px solid red;
+                h2, p {
+                    width: calc((100% / 2) - 40px);
+                    display: flex;
+                    justify-content: center;
                 }
         }
 }
+    
 
-.platformsUl {
+.imgContainer {
+    width: 100%;
     display: flex;
-    gap: 30px;
-        i {
-            font-size: 30px;
-            color: variables.$p3Blue;
+    justify-content: center;
+        img {
+            // images are TOO SMALL and therefore BLURRY
+            width: 70%;
         }
 }
 
-
-
+    
+.platformsUl {
+width: 100%;
+display: flex;
+justify-content: center;
+gap: 30px;
+    i {
+        font-size: 30px;
+        color: variables.$p3Blue;
+    }
+}
+    
+    
 
 
 

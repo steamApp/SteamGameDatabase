@@ -320,31 +320,65 @@ ul {
 }
 
 .gamesUl {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  padding: 100px 0px;
-}
-.gamesUl .newLiElement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 100px auto;
+  gap: 50px;
+}
+.gamesUl .newLiElement {
+  width: calc(50% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 0;
+  border: 2px solid red;
 }
-.gamesUl .newLiElement img {
-  width: 50%;
-}
-
-.platformsUl {
+.gamesUl .newLiElement h2, .gamesUl .newLiElement p {
+  width: calc(50% - 40px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.imgContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.imgContainer img {
+  width: 70%;
+}
+
+.platformsUl {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
 }
 .platformsUl i {
