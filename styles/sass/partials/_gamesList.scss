@@ -5,6 +5,7 @@
     flex-wrap: wrap;
     padding: 100px auto;
     gap: 50px;
+    justify-content: space-evenly;
         .newLiElement {
             width: calc((100% /2) - 100px);
             display: flex;
@@ -43,21 +44,4 @@ gap: 30px;
         font-size: 30px;
         color: variables.$p3Blue;
     }
-}
-    
-    
-
-
-
-
-
-
-
-
-.platformsUl {
-    padding: 0;
-}
-
-.platformsUl li {
-    // border: 1px solid green;
 }
