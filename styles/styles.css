@@ -247,56 +247,46 @@ h2,
 p,
 a {
   font-family: "Anybody", cursive;
-  color: #006E90;
+  color: rgb(136, 183, 181);
 }
 
 .navBar {
-  margin: 0 auto;
-  padding: 1% 10%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  border: 2px solid red;
+  background-color: #171a21;
+}
+.navBar .navFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px solid red;
-  background-color: #D1EFB5;
 }
 .navBar h2 {
-  display: inline-block;
+  border: 2px solid red;
 }
 .navBar .navUlItems {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 5%;
-  width: 40%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  border: 2px solid red;
+  width: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: rgb(174, 247, 142);
 }
 .navBar .navUlItems a {
-  text-decoration: none;
-  margin: 0 5%;
+  color: rgb(174, 247, 142);
 }
 
 .slideOutNav {
   display: none;
-}
-
-body {
-  background-color: #D3FAD6;
 }
 
 .wrapper {
@@ -317,7 +307,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: peachpuff;
+  background-color: rgb(21, 50, 67);
 }
 
 .h1Container {
@@ -336,6 +326,10 @@ header {
   margin: 0 auto;
 }
 
+.gamesSection {
+  background-color: rgb(40, 75, 99);
+}
+
 .gamesUl {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,6 +343,8 @@ header {
           justify-content: space-evenly;
 }
 .gamesUl .newLiElement {
+  border-radius: 8px;
+  background-color: rgb(40, 75, 99);
   width: calc(50% - 100px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -407,7 +403,7 @@ header {
 }
 
 footer {
-  background-color: #D1EFB5;
+  background-color: #171a21;
   padding: 1% 0;
 }
 footer .footerContainer {
@@ -420,4 +416,10 @@ footer .footerContainer {
 }
 footer .footerContainer a {
   text-decoration: none;
+  color: rgb(174, 247, 142);
+}
+
+.formSection {
+  background-color: #171a21;
+  padding: 25px 0;
 }

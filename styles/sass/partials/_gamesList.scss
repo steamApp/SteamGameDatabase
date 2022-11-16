@@ -1,5 +1,9 @@
 @use "./variables";
 
+.gamesSection {
+    background-color: variables.$indigo
+}
+
 .gamesUl {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +11,8 @@
     gap: 50px;
     justify-content: space-evenly;
         .newLiElement {
+            border-radius: 8px;
+            background-color: variables.$indigo;
             width: calc((100% /2) - 100px);
             display: flex;
             flex-direction: row;

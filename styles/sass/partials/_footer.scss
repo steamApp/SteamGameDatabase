@@ -1,7 +1,7 @@
 @use "./variables";
 
 footer {
-    background-color: variables.$p1TeaGreen;
+    background-color: variables.$steamNav;
     padding: 1% 0;
 
     .footerContainer {
@@ -9,6 +9,7 @@ footer {
         justify-content: center;
             a {
                 text-decoration: none;
+                color: variables.$green;
             }
     }
 }
