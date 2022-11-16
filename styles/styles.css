@@ -327,25 +327,31 @@ header {
 }
 
 .gamesSection {
-  background-color: rgb(40, 75, 99);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(34, 81, 109)), to(rgb(21, 50, 67)));
+  background: linear-gradient(rgb(34, 81, 109), rgb(21, 50, 67));
+  border: 2px solid black;
 }
 
 .gamesUl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 100px auto;
-  gap: 50px;
+  padding: 0;
+  gap: 10px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 .gamesUl .newLiElement {
   border-radius: 8px;
-  background-color: rgb(40, 75, 99);
-  width: calc(50% - 100px);
+  background-color: rgb(19, 47, 62);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,16 +359,17 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 20px 0;
-  border: 2px solid red;
+  padding: 20px;
+  gap: 20px;
+}
+.gamesUl .newLiElement img {
+  width: auto;
 }
 .gamesUl .newLiElement h2, .gamesUl .newLiElement p {
   width: calc(50% - 40px);
@@ -372,19 +379,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.imgContainer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.imgContainer img {
-  width: 70%;
+  text-align: center;
 }
 
 .platformsUl {

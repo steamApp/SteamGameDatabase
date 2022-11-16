@@ -45,7 +45,7 @@ steamApp.displayGame = (gamesList) => {
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
         newLiElement.innerHTML = `
-        <div class="imgContainer"><img src=${game.tiny_image} alt=${game.name} /></div>
+        <img src=${game.tiny_image} alt=${game.name} />
         <h2>${game.name}</h2>
         `;
         
