@@ -8,19 +8,15 @@ steamApp.storeSearch = () => {
         const inputElement = document.querySelector('input');
         const userSearch = inputElement.value;
 
-        const currency = document.querySelector('#currencyForm');
-        // currency.addEventListener('change', () =>{
-            const chosenCurrency = currency.value;
-            console.log(chosenCurrency);
+        const selectElement = document.querySelector('#currency')
+        const userCurrency = selectElement.value;
 
-        
-
-    const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
+            const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
     
             url.search = new URLSearchParams({
                 term: userSearch,
-                l: "english",
-                cc: "CA",
+                l: "francais",
+                cc: userCurrency,
             })
         
             fetch(url)
@@ -33,7 +29,6 @@ steamApp.storeSearch = () => {
                 })
             
             inputElement.value = ''
-        
     })
 }
 
@@ -98,18 +93,8 @@ steamApp.displayGame = (gamesList) => {
 }
 
 
-
-
-// steamApp.getUserInput = () => {
-//     document.querySelector('form').addEventListener('submit', function () {
-//         const userSearch = this.value;
-//         steamApp.storeSearch(userSearch);
-//         console.log(userSearch)
-//     })
-// }
-
 steamApp.init = () => {
-    steamApp.storeSearch();
+    steamApp.storeSearch("CA");
 }
 
 steamApp.init();
