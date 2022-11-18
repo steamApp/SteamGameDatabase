@@ -21,12 +21,15 @@ label {
 select {
     padding: 5px 20px;
     min-width: 8%;
-    border-radius: 0;
+    border-radius: 8px;
     border: none;
     margin: 0 3% 0 1%;
+    border: 2px solid variables.$green;
 }
 
 input {
     min-width: 50%;
     margin-left: 1%;
+    border-radius: 8px;
+    border: 2px solid variables.$green;
 }

@@ -249,6 +249,7 @@ html {
 
 h1,
 h2,
+h3,
 p,
 a {
   font-family: "Anybody", cursive, "Lato", sans-serif;
@@ -353,6 +354,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-image: url(../../assets/consoles.png);
   background-color: rgb(21, 50, 67);
 }
 
@@ -374,8 +376,8 @@ header {
 }
 
 .gamesSection {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgb(34, 81, 109)), to(rgb(21, 50, 67)));
-  background: linear-gradient(rgb(34, 81, 109), rgb(21, 50, 67));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(21, 50, 67)), to(rgb(34, 81, 109)));
+  background: linear-gradient(rgb(21, 50, 67), rgb(34, 81, 109));
   border: 2px solid #171a21;
   min-height: 13vh;
 }
@@ -467,6 +469,21 @@ header {
   color: rgb(204, 224, 223);
 }
 
+.noResultsHidden {
+  display: none;
+}
+
+.noResults {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 100px 0 80px 0;
+}
+
 footer {
   background-color: #171a21;
   padding: 1% 0;
@@ -511,14 +528,17 @@ label {
 select {
   padding: 5px 20px;
   min-width: 8%;
-  border-radius: 0;
+  border-radius: 8px;
   border: none;
   margin: 0 3% 0 1%;
+  border: 2px solid rgb(174, 247, 142);
 }
 
 input {
   min-width: 50%;
   margin-left: 1%;
+  border-radius: 8px;
+  border: 2px solid rgb(174, 247, 142);
 }
 
 @media (max-width: 1000px) {

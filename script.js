@@ -29,13 +29,15 @@ steamApp.storeSearch = () => {
             })
 
         inputElement.value = ''
+
+
     })
 }
 
 steamApp.displayGame = (gamesList) => {
+
     document.querySelector('.gamesUl').innerHTML = '';
     gamesList.forEach((game) => {
-        // console.log(game)
 
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
@@ -45,21 +47,19 @@ steamApp.displayGame = (gamesList) => {
         `;
 
         const selectElement = document.querySelector('#currency')
-        console.log(selectElement)
 
         const gamePriceEl = document.createElement('p');
         const getPrice = (gamePrice) => {
-            if (selectElement.value === "GB" && game.price) {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((game.price.final) / 100).toFixed(2)}</a>`;
-            } else if (selectElement.value === "CA" && game.price || selectElement.value === "US" && game.price) {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((game.price.final) / 100).toFixed(2)}</a>`;
-            }
-
-            else {
+            if (selectElement.value === "GB" && gamePrice) {
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((gamePrice.final) / 100).toFixed(2)}</a>`;
+            } else if (selectElement.value === "CA" && gamePrice || selectElement.value === "US" && gamePrice) {
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((gamePrice.final) / 100).toFixed(2)}</a>`;
+            } else {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">Click Here For Pricing</a>`;
             }
         }
-        getPrice(game);
+
+        getPrice(game.price);
         const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
@@ -73,24 +73,13 @@ steamApp.displayGame = (gamesList) => {
         if (game.platforms.windows === true) {
             windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
             platformsUl.append(windowsIcon);
-        } else {
-            // windowsIcon.innerHTML = 'doesnt work'
-        }
-        if (game.platforms.mac === true) {
+        } if (game.platforms.mac === true) {
             macIcon.innerHTML = '<i class="fa-brands fa-apple"></i>'
             platformsUl.append(macIcon);
 
-        } else {
-            // macIcon.innerHTML = 'this doesnt work rn'
-            // platformsUl.append(macIcon);
-        }
-        if (game.platforms.linux === true) {
+        } if (game.platforms.linux === true) {
             linuxIcon.innerHTML = '<i class="fa-brands fa-linux"></i>'
             platformsUl.append(linuxIcon);
-
-        } else {
-            // platformsUl.append(linuxIcon);
-            // linuxIcon.innerHTML = 'this doesnt work rn'
         }
 
         newLiElement.append(platformsUl)

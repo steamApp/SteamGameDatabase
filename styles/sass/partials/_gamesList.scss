@@ -1,7 +1,7 @@
 @use "./variables";
 
 .gamesSection {
-    background: linear-gradient(variables.$gradientBlue, variables.$darkBlue);
+    background: linear-gradient(variables.$darkBlue, variables.$gradientBlue);
     border: 2px solid variables.$steamNav;
     min-height: 13vh;
 }
@@ -73,3 +73,15 @@ padding-left: 0;
             }
     }
 }
+
+.noResultsHidden {
+    display: none;
+}
+
+.noResults {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0 80px 0;
+}
+

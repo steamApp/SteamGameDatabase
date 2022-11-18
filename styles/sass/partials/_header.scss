@@ -4,7 +4,9 @@ header {
     height: 70vh;
     display: flex;
     flex-direction: column;
+    background-image: url(../../assets/consoles.png);
     background-color: variables.$darkBlue;
+
 }
 
 .h1Container {
