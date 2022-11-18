@@ -10,15 +10,13 @@
         }
             .navUlItems {
                 width: fit-content;
-                width: fit-content;
                 justify-content: space-between;
-                gap: 15px;
                 gap: 15px;
                 padding: 0;
                 display: flex;
                 color: variables.$green;
                 align-self: center;
-                align-self: center;
+
                     a {
                         text-decoration: none;
                         color: variables.$green;
