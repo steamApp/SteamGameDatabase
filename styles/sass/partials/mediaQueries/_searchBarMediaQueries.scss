@@ -1,0 +1,16 @@
+@use "../variables";
+
+@media (max-width: 770px) {
+    #searchBar {
+        flex-direction: column;
+            input {
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            select {
+                margin: 0 auto;
+                width: 100%;
+            }
+    }
+}

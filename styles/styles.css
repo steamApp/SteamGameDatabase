@@ -293,19 +293,22 @@ label {
           justify-content: space-between;
 }
 .navBar .navUlItems {
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 15px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: rgb(174, 247, 142);
-  width: 15%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .navBar .navUlItems a {
-  margin-left: 2%;
   text-decoration: none;
   color: rgb(174, 247, 142);
   -webkit-box-align: center;
@@ -314,6 +317,9 @@ label {
 }
 .navBar .navUlItems a:hover {
   border-bottom: 1px solid rgb(174, 247, 142);
+}
+.navBar button {
+  display: none;
 }
 
 .slideOutNav {
@@ -360,6 +366,7 @@ header {
 }
 .h1Container h1 {
   margin: 0 auto;
+  text-align: center;
 }
 
 .gamesSection {
@@ -485,11 +492,28 @@ footer .footerContainer a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
-#searchBar select {
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+select {
+  padding: 5px 20px;
+  min-width: 8%;
+  border-radius: 0;
+  border: none;
   margin: 0 3% 0 1%;
 }
-#searchBar input {
+
+input {
+  min-width: 50%;
   margin-left: 1%;
 }
 
@@ -521,5 +545,21 @@ footer .footerContainer a {
 @media (max-width: 440px) {
   .gamesUl .newLiElement {
     width: auto;
+  }
+}
+@media (max-width: 770px) {
+  #searchBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #searchBar input {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #searchBar select {
+    margin: 0 auto;
+    width: 100%;
   }
 }

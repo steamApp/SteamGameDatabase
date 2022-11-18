@@ -11,24 +11,24 @@ steamApp.storeSearch = () => {
         const selectElement = document.querySelector('#currency')
         const userCurrency = selectElement.value;
 
-            const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
-    
-            url.search = new URLSearchParams({
-                term: userSearch,
-                l: "english",
-                cc: userCurrency,
+        const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
+
+        url.search = new URLSearchParams({
+            term: userSearch,
+            l: "english",
+            cc: userCurrency,
+        })
+
+        fetch(url)
+            .then((res) => {
+                return res.json();
             })
-        
-            fetch(url)
-                .then((res) => {
-                    return res.json();
-                })
-                .then((data) => {
-                    steamApp.displayGame(data.items);
-                    // console.log(data.items);
-                })
-            
-            inputElement.value = ''
+            .then((data) => {
+                steamApp.displayGame(data.items);
+                // console.log(data.items);
+            })
+
+        inputElement.value = ''
     })
 }
 
@@ -43,18 +43,18 @@ steamApp.displayGame = (gamesList) => {
         <img src=${game.tiny_image} alt=${game.name} />
         <h2><a href="https://store.steampowered.com/app/${game.id}" target="_blank">${game.name}</a></h2>
         `;
-        
+
         const selectElement = document.querySelector('#currency')
         console.log(selectElement)
 
         const gamePriceEl = document.createElement('p');
         const getPrice = (gamePrice) => {
             if (selectElement.value === "GB" && game.price) {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((game.price.final) / 100 ).toFixed(2)}</a>`;
-            }else if (selectElement.value === "CA" || selectElement.value === "US" && game.price){
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((game.price.final) / 100 ).toFixed(2)}</a>`;
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((game.price.final) / 100).toFixed(2)}</a>`;
+            } else if (selectElement.value === "CA" || selectElement.value === "US" && game.price) {
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((game.price.final) / 100).toFixed(2)}</a>`;
             }
-            
+
             else {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">Click Here For Pricing</a>`;
             }

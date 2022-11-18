@@ -9,14 +9,14 @@
             justify-content: space-between;
         }
             .navUlItems {
-                width: auto;
+                width: fit-content;
                 justify-content: space-between;
+                gap: 15px;
                 padding: 0;
                 display: flex;
                 color: variables.$green;
-                width: 15%;
+                align-self: center;
                     a {
-                        margin-left: 2%;
                         text-decoration: none;
                         color: variables.$green;
                         align-items: center;
@@ -26,19 +26,10 @@
                         border-bottom: 1px solid variables.$green;
                     }
             }
+            button {
+                display: none;
+            }
 
-    // .navUlItems{
-    //     display: flex;
-    //     padding: 0 5%;
-    //     width: 40%;
-    //     flex-direction: row;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     a{
-    //         text-decoration: none;
-    //         margin: 0 5%;
-    //     }
-    // }
 }
 
 .slideOutNav{
