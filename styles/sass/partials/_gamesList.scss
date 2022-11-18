@@ -29,23 +29,45 @@
                     // images are TOO SMALL and therefore BLURRY
                     width: auto;
                 }
+
                 h2, p {
                     width: calc((100% / 2) - 40px);
                     display: flex;
                     justify-content: center;
                     text-align: center;
+
                 }
         }
 }
 
+.newLiElement p {
+    order: 2;
+        a {
+            color: variables.$green;
+        }
+}
+
+.newLiElement h2 {
+        :hover,
+        :focus {
+            color: variables.$green;
+        }
+        a {
+            text-decoration: none;
+        }
+}
     
 .platformsUl {
-width: 100%;
+width: 50%;
 display: flex;
 justify-content: center;
 gap: 30px;
-    i {
-        font-size: 30px;
-        color: variables.$p3Blue;
+padding-left: 0;
+    li {
+        text-align: center;
+            i {
+                font-size: 30px;
+                    color: variables.$lightCyan;
+            }
     }
 }
