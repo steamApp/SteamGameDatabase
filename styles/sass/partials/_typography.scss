@@ -3,11 +3,35 @@
 h1,
 h2,
 p,
-a{
+a
+{
     font-family: 'Anybody', cursive;
     color: variables.$grey;
 }
 
+input{
+    width: 30%;
+}
+
+select,
+option{
+    color: variables.$steamNav;
+}
+
+select{
+    font-family: 'Anybody', cursive;    
+}
+
+#currencyOption,
+option{
+    font-family: 'Lato', sans-serif;
+    // font-family: 'Anybody', cursive;    
+}
+
+label{
+    font-family: 'Anybody', cursive;
+    color: variables.$green;
+}
 
 .mainHeader{
 

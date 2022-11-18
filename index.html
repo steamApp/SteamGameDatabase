@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1015bcb745.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Steam App</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anybody:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
@@ -50,16 +51,15 @@
         <section class="formSection">
             <div class="wrapper">
                 <form action="#" id="searchBar">
+                        <label for="currency">Currency:</label>
+                        <select name="currency" id="currency">
+                            <option value="CA" id="currencyOption">CAD</option>
+                            <option value="US" id="currencyOption">USD</option>
+                            <option value="GB" id="currencyOption">GBP</option>
+                        </select>
 
-                    <label for="currency">Currency</label>
-                    <select name="currency" id="currency">
-                        <option value="CA">CAD</option>
-                        <option value="US">USD</option>
-                        <option value="GB">GBP</option>
-                    </select>
-
-                    <label for="search">Search:</label>
-                    <input type="search" id="search" name="search">
+                        <label for="search">Search:</label>
+                        <input type="search" id="search" name="search">
                 </form>
             </div>
         </section>
