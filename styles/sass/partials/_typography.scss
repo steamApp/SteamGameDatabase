@@ -1,5 +1,10 @@
 @use "./variables";
 
+html {
+    // 1rem = 20px
+    font-size: 125%;
+}
+
 h1,
 h2,
 p,

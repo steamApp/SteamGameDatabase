@@ -242,6 +242,10 @@ html {
   text-align: center;
 }
 
+html {
+  font-size: 125%;
+}
+
 h1,
 h2,
 p,
