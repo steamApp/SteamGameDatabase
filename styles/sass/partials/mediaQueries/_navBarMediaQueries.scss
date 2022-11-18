@@ -1,0 +1,26 @@
+@media (max-width: 1300px){
+    .navBar .navUlItems{
+        width: 30%;
+        justify-content: space-evenly;
+        #language{
+            margin-right: 5%;
+        }
+    }
+}
+
+@media(max-width: 900px){
+    .navBar .navUlItems{
+        width: 45%;
+    }
+}
+
+@media(max-width: 700px){
+    #language,
+    #cart{
+        visibility: hidden;
+    }
+    #hamburgerIcon{
+        visibility: visible;
+        font-size: 2rem;
+    }
+}

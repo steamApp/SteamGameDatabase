@@ -315,6 +315,9 @@ label {
 .navBar .navUlItems a:hover {
   border-bottom: 1px solid rgb(174, 247, 142);
 }
+.navBar .navUlItems i {
+  visibility: hidden;
+}
 
 .slideOutNav {
   display: none;
@@ -521,5 +524,31 @@ footer .footerContainer a {
 @media (max-width: 440px) {
   .gamesUl .newLiElement {
     width: auto;
+  }
+}
+@media (max-width: 1300px) {
+  .navBar .navUlItems {
+    width: 30%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .navBar .navUlItems #language {
+    margin-right: 5%;
+  }
+}
+@media (max-width: 900px) {
+  .navBar .navUlItems {
+    width: 45%;
+  }
+}
+@media (max-width: 700px) {
+  #language,
+#cart {
+    visibility: hidden;
+  }
+  #hamburgerIcon {
+    visibility: visible;
+    font-size: 2rem;
   }
 }
