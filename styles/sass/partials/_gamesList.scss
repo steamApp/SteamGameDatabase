@@ -2,7 +2,7 @@
 
 .gamesSection {
     background: linear-gradient(variables.$gradientBlue, variables.$darkBlue);
-    border: 2px solid black;
+    border: 2px solid variables.$steamNav;
 }
 
 .gamesUl {

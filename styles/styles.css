@@ -298,6 +298,11 @@ a {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 ul {
   list-style: none;
 }
@@ -333,7 +338,7 @@ header {
 .gamesSection {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(34, 81, 109)), to(rgb(21, 50, 67)));
   background: linear-gradient(rgb(34, 81, 109), rgb(21, 50, 67));
-  border: 2px solid black;
+  border: 2px solid #171a21;
 }
 
 .gamesUl {
