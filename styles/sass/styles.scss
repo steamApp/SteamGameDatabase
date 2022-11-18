@@ -7,4 +7,7 @@
 @use "./partials/header";
 @use "./partials/gamesList";
 @use "./partials/footer";
-@use "./partials/searchBar"
+@use "./partials/searchBar";
+
+// Media Queries
+@use "./partials/mediaQueries/gamesListMediaQueries";
