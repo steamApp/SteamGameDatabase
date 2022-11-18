@@ -15,7 +15,7 @@ steamApp.storeSearch = () => {
     
             url.search = new URLSearchParams({
                 term: userSearch,
-                l: "francais",
+                l: "english",
                 cc: userCurrency,
             })
         
@@ -41,16 +41,16 @@ steamApp.displayGame = (gamesList) => {
         newLiElement.classList.add('newLiElement');
         newLiElement.innerHTML = `
         <img src=${game.tiny_image} alt=${game.name} />
-        <h2>${game.name}</h2>
+        <h2><a href="https://store.steampowered.com/app/${game.id}" target="_blank">${game.name}</a></h2>
         `;
         
 
         const gamePriceEl = document.createElement('p');
         const getPrice = (gamePrice) => {
             if (gamePrice.price) {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}">${game.price.final}</a>`;
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${game.price.final}</a>`;
             } else {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}">Pricing Info Here</a>`;
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">Click Here For Pricing</a>`;
             }
         }
         getPrice(game);

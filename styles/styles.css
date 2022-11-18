@@ -242,12 +242,16 @@ html {
   text-align: center;
 }
 
+html {
+  font-size: 125%;
+}
+
 h1,
 h2,
 p,
 a {
   font-family: "Anybody", cursive;
-  color: rgb(136, 183, 181);
+  color: rgb(204, 224, 223);
 }
 
 input {
@@ -321,6 +325,11 @@ label {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
 ul {
   list-style: none;
 }
@@ -356,7 +365,8 @@ header {
 .gamesSection {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(34, 81, 109)), to(rgb(21, 50, 67)));
   background: linear-gradient(rgb(34, 81, 109), rgb(21, 50, 67));
-  border: 2px solid black;
+  border: 2px solid #171a21;
+  min-height: 13vh;
 }
 
 .gamesUl {
@@ -409,8 +419,26 @@ header {
   text-align: center;
 }
 
+.newLiElement p {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-size: 1.2rem;
+}
+.newLiElement p a {
+  color: rgb(174, 247, 142);
+}
+
+.newLiElement h2 :hover,
+.newLiElement h2 :focus {
+  color: rgb(174, 247, 142);
+}
+.newLiElement h2 a {
+  text-decoration: none;
+}
+
 .platformsUl {
-  width: 100%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,10 +446,14 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 30px;
+  padding-left: 0;
 }
-.platformsUl i {
+.platformsUl li {
+  text-align: center;
+}
+.platformsUl li i {
   font-size: 30px;
-  color: #006E90;
+  color: rgb(204, 224, 223);
 }
 
 footer {
@@ -459,4 +491,35 @@ footer .footerContainer a {
 }
 #searchBar input {
   margin-left: 1%;
+}
+
+@media (max-width: 1000px) {
+  .gamesUl {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .gamesUl .newLiElement {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(50% - 20px);
+  }
+  .gamesUl .newLiElement h2, .gamesUl .newLiElement p {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .gamesUl .newLiElement {
+    width: 80%;
+  }
+}
+@media (max-width: 440px) {
+  .gamesUl .newLiElement {
+    width: auto;
+  }
 }

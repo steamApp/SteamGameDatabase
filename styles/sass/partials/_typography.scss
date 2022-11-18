@@ -1,12 +1,17 @@
 @use "./variables";
 
+html {
+    // 1rem = 20px
+    font-size: 125%;
+}
+
 h1,
 h2,
 p,
 a
 {
     font-family: 'Anybody', cursive;
-    color: variables.$grey;
+    color: variables.$lightCyan;
 }
 
 input{

@@ -1,0 +1,34 @@
+@use "../variables";
+
+@media (max-width: 1000px) {
+    .gamesUl {
+        flex-direction: row;
+        flex-wrap: wrap;
+            .newLiElement {
+                flex-direction: column;
+                width: calc((100% / 2) - 20px);
+                    h2, p {
+                        width: 100%;
+                    }
+            }
+    }
+}
+
+@media (max-width: 700px) {
+    .gamesUl {
+        .newLiElement {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .gamesUl {
+        .newLiElement {
+            width: auto;
+        }
+    }
+}
+
+
+// width side-scroll at 286px
