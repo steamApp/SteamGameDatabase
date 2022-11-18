@@ -254,12 +254,34 @@ a {
   color: rgb(204, 224, 223);
 }
 
+input {
+  width: 30%;
+}
+
+select,
+option {
+  color: #171a21;
+}
+
+select {
+  font-family: "Anybody", cursive;
+}
+
+#currencyOption,
+option {
+  font-family: "Lato", sans-serif;
+}
+
+label {
+  font-family: "Anybody", cursive;
+  color: rgb(174, 247, 142);
+}
+
 .navBar {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid red;
   background-color: #171a21;
 }
 .navBar .navFlex {
@@ -270,11 +292,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.navBar h2 {
-  border: 2px solid red;
-}
 .navBar .navUlItems {
-  border: 2px solid red;
   width: auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -284,9 +302,18 @@ a {
   display: -ms-flexbox;
   display: flex;
   color: rgb(174, 247, 142);
+  width: 15%;
 }
 .navBar .navUlItems a {
+  margin-left: 2%;
+  text-decoration: none;
   color: rgb(174, 247, 142);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navBar .navUlItems a:hover {
+  border-bottom: 1px solid rgb(174, 247, 142);
 }
 
 .slideOutNav {
@@ -450,6 +477,7 @@ footer .footerContainer a {
   padding: 25px 0;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1000px) {
   .gamesUl {
     -webkit-box-orient: horizontal;
@@ -479,4 +507,19 @@ footer .footerContainer a {
   .gamesUl .newLiElement {
     width: auto;
   }
+=======
+#searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#searchBar select {
+  margin: 0 3% 0 1%;
+}
+#searchBar input {
+  margin-left: 1%;
+>>>>>>> 3468b97ed0e49fde22fa533cde1c40662155f342
 }

@@ -3,28 +3,30 @@
 .navBar{
     width: 100%;
     display: flex;
-    border: 2px solid red;
     background-color: variables.$steamNav;
         .navFlex {
             display: flex;
             justify-content: space-between;
         }
-            h2 {
-
-                border: 2px solid red;
-            }
             .navUlItems {
-                border: 2px solid red;
                 width: auto;
                 justify-content: space-between;
                 padding: 0;
                 display: flex;
                 color: variables.$green;
+                width: 15%;
                     a {
+                        margin-left: 2%;
+                        text-decoration: none;
                         color: variables.$green;
+                        align-items: center;
+                        
+                    }
+                    a:hover{
+                        border-bottom: 1px solid variables.$green;
                     }
             }
- 
+
     // .navUlItems{
     //     display: flex;
     //     padding: 0 5%;
