@@ -1,5 +1,8 @@
 @use "./variables";
 
+// Anybody Regular, Anybody Bold, Lato Regular, Lato Bold
+@import url('https://fonts.googleapis.com/css2?family=Anybody:wght@400;700&family=Lato:wght@400;700&display=swap');
+
 html {
     // 1rem = 20px
     font-size: 125%;
@@ -7,10 +10,11 @@ html {
 
 h1,
 h2,
+h3,
 p,
 a
 {
-    font-family: 'Anybody', cursive;
+    font-family: 'Anybody', cursive, 'Lato', sans-serif;
     color: variables.$lightCyan;
 }
 

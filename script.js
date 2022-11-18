@@ -11,31 +11,33 @@ steamApp.storeSearch = () => {
         const selectElement = document.querySelector('#currency')
         const userCurrency = selectElement.value;
 
-            const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
-    
-            url.search = new URLSearchParams({
-                term: userSearch,
-                l: "english",
-                cc: userCurrency,
+        const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
+
+        url.search = new URLSearchParams({
+            term: userSearch,
+            l: "english",
+            cc: userCurrency,
+        })
+
+        fetch(url)
+            .then((res) => {
+                return res.json();
             })
-        
-            fetch(url)
-                .then((res) => {
-                    return res.json();
-                })
-                .then((data) => {
-                    steamApp.displayGame(data.items);
-                    // console.log(data.items);
-                })
-            
-            inputElement.value = ''
+            .then((data) => {
+                steamApp.displayGame(data.items);
+                // console.log(data.items);
+            })
+
+        inputElement.value = ''
+
+
     })
 }
 
 steamApp.displayGame = (gamesList) => {
+
     document.querySelector('.gamesUl').innerHTML = '';
     gamesList.forEach((game) => {
-        // console.log(game)
 
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
@@ -43,7 +45,7 @@ steamApp.displayGame = (gamesList) => {
         <img src=${game.tiny_image} alt=${game.name} />
         <h2><a href="https://store.steampowered.com/app/${game.id}" target="_blank">${game.name}</a></h2>
         `;
-        
+
         const selectElement = document.querySelector('#currency')
         
 
@@ -73,24 +75,13 @@ steamApp.displayGame = (gamesList) => {
         if (game.platforms.windows === true) {
             windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
             platformsUl.append(windowsIcon);
-        } else {
-            // windowsIcon.innerHTML = 'doesnt work'
-        }
-        if (game.platforms.mac === true) {
+        } if (game.platforms.mac === true) {
             macIcon.innerHTML = '<i class="fa-brands fa-apple"></i>'
             platformsUl.append(macIcon);
 
-        } else {
-            // macIcon.innerHTML = 'this doesnt work rn'
-            // platformsUl.append(macIcon);
-        }
-        if (game.platforms.linux === true) {
+        } if (game.platforms.linux === true) {
             linuxIcon.innerHTML = '<i class="fa-brands fa-linux"></i>'
             platformsUl.append(linuxIcon);
-
-        } else {
-            // platformsUl.append(linuxIcon);
-            // linuxIcon.innerHTML = 'this doesnt work rn'
         }
 
         newLiElement.append(platformsUl)

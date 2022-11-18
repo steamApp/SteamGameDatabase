@@ -4,7 +4,9 @@ header {
     height: 70vh;
     display: flex;
     flex-direction: column;
+    background-image: url(../../assets/consoles.png);
     background-color: variables.$darkBlue;
+
 }
 
 .h1Container {
@@ -14,5 +16,6 @@ header {
     align-items: center;
         h1 {
             margin: 0 auto;
+            text-align: center;
         }
 }
