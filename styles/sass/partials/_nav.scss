@@ -25,6 +25,9 @@
                     a:hover{
                         border-bottom: 1px solid variables.$green;
                     }
+                    i{
+                        visibility: hidden;
+                    }
             }
             button {
                 display: none;
