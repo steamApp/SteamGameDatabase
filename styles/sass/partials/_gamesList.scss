@@ -3,6 +3,7 @@
 .gamesSection {
     background: linear-gradient(variables.$gradientBlue, variables.$darkBlue);
     border: 2px solid variables.$steamNav;
+    min-height: 10.5vh;
 }
 
 .gamesUl {
