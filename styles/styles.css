@@ -366,7 +366,7 @@ header {
   background: -webkit-gradient(linear, left top, left bottom, from(rgb(34, 81, 109)), to(rgb(21, 50, 67)));
   background: linear-gradient(rgb(34, 81, 109), rgb(21, 50, 67));
   border: 2px solid #171a21;
-  min-height: 10.5vh;
+  min-height: 13vh;
 }
 
 .gamesUl {
