@@ -45,21 +45,21 @@ steamApp.displayGame = (gamesList) => {
         `;
         
         const selectElement = document.querySelector('#currency')
-        console.log(selectElement)
+        
 
         const gamePriceEl = document.createElement('p');
+
         const getPrice = (gamePrice) => {
-            if (selectElement.value === "GB" && game.price) {
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((game.price.final) / 100 ).toFixed(2)}</a>`;
-            }else if (selectElement.value === "CA" || selectElement.value === "US" && game.price){
-                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((game.price.final) / 100 ).toFixed(2)}</a>`;
-            }
-            
-            else {
+            if (selectElement.value === "GB" && gamePrice) {
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((gamePrice.final) / 100).toFixed(2)}</a>`;
+            } else if (selectElement.value === "CA" && gamePrice || selectElement.value === "US" && gamePrice) {
+                gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((gamePrice.final) / 100).toFixed(2)}</a>`;
+            } else {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">Click Here For Pricing</a>`;
             }
         }
-        getPrice(game);
+        
+        getPrice(game.price);
         const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
@@ -99,8 +99,32 @@ steamApp.displayGame = (gamesList) => {
 }
 
 
+
+
+steamApp.slideOutNav = () =>{
+    const navItems = document.querySelector('.navUlItems')
+    const closeIcon = document.querySelector('.closeIcon');
+    const hamburgerIcon = document.querySelector('.hamburgerIcon');
+    const slideOutNav = document.querySelector('.slideOutNav');
+    
+    const toggleMenu = () => {
+        if(navItems.classList.contains('showSlideOut')){
+            navItems.classList.remove('showSlideOut');
+            closeIcon.style.display = 'none';
+            hamburgerIcon.style.display = 'block';
+        } else{
+            navItems.classList.add('showSlideOut');
+            closeIcon.style.display = 'block';
+            hamburgerIcon.style.display = 'none'
+        }
+    }
+
+    slideOutNav.addEventListener('click', toggleMenu);
+}
+
 steamApp.init = () => {
     steamApp.storeSearch("CA");
+    steamApp.slideOutNav();
 }
 
 steamApp.init();

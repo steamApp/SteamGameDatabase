@@ -293,19 +293,22 @@ label {
           justify-content: space-between;
 }
 .navBar .navUlItems {
-  width: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 15px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: rgb(174, 247, 142);
-  width: 15%;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 .navBar .navUlItems a {
-  margin-left: 2%;
   text-decoration: none;
   color: rgb(174, 247, 142);
   -webkit-box-align: center;
@@ -313,10 +316,21 @@ label {
           align-items: center;
 }
 .navBar .navUlItems a:hover {
-  border-bottom: 1px solid rgb(174, 247, 142);
+  text-decoration: underline;
 }
-.navBar .navUlItems i {
-  visibility: hidden;
+.navBar .slideOutNav {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: white;
+  cursor: pointer;
+  display: none;
+  color: rgb(174, 247, 142);
+}
+.navBar .slideOutNav .hamburgerIcon {
+  display: visible;
+}
+.navBar .slideOutNav .closeIcon {
+  display: none;
 }
 
 .slideOutNav {
@@ -543,12 +557,32 @@ footer .footerContainer a {
   }
 }
 @media (max-width: 700px) {
-  #language,
+  .navBar .navUlItems #language,
 #cart {
-    visibility: hidden;
+    display: none;
   }
-  #hamburgerIcon {
-    visibility: visible;
+  .navBar .slideOutNav {
+    display: block;
+    background-color: #171a21;
+    border: none;
+  }
+  .navBar .slideOutNav .hamburgerIcon,
+.navBar .slideOutNav .closeIcon {
+    display: visible;
     font-size: 2rem;
+    cursor: pointer;
+    color: rgb(174, 247, 142);
+  }
+  .showMenu {
+    z-index: 99;
+    background: black;
+    color: rgb(174, 247, 142);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    position: fixed;
   }
 }
