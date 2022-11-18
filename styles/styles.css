@@ -321,9 +321,6 @@ label {
   text-decoration: underline;
 }
 .navBar .slideOutNav {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  background-color: white;
   cursor: pointer;
   display: none;
   color: rgb(174, 247, 142);
@@ -362,7 +359,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../../assets/consoles.png);
+  background-image: url(../assets/consoles.png);
   background-color: rgb(21, 50, 67);
 }
 
@@ -595,24 +592,9 @@ input {
     width: 100%;
   }
 }
-@media (max-width: 1300px) {
-  .navBar .navUlItems {
-    width: 30%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .navBar .navUlItems #language {
-    margin-right: 5%;
-  }
-}
-@media (max-width: 900px) {
-  .navBar .navUlItems {
-    width: 45%;
-  }
-}
 @media (max-width: 700px) {
-  .navBar .navUlItems #language,
+  .navBar .navUlItems,
+#language,
 #cart {
     display: none;
   }
@@ -628,16 +610,7 @@ input {
     cursor: pointer;
     color: rgb(174, 247, 142);
   }
-  .showMenu {
-    z-index: 99;
-    background: black;
-    color: rgb(174, 247, 142);
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-    position: fixed;
+  .navBar .slideOutNav .hamburgerIcon {
+    z-index: 100;
   }
 }
