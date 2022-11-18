@@ -51,7 +51,7 @@ steamApp.displayGame = (gamesList) => {
         const getPrice = (gamePrice) => {
             if (selectElement.value === "GB" && game.price) {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((game.price.final) / 100).toFixed(2)}</a>`;
-            } else if (selectElement.value === "CA" || selectElement.value === "US" && game.price) {
+            } else if (selectElement.value === "CA" && game.price || selectElement.value === "US" && game.price) {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">$${((game.price.final) / 100).toFixed(2)}</a>`;
             }
 
