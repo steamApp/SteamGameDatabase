@@ -85,26 +85,36 @@ steamApp.displayGame = (gamesList) => {
         }
 
         newLiElement.append(platformsUl)
-
+        
     });
+
+    steamApp.noResults(gamesList);
+}
+
+steamApp.noResults = (emptyList) => {
+    const noGames = emptyList;
+    const noResults = document.querySelector('.noResults')
+    if (noGames.length === 0) {
+        noResults.style.display = 'flex'
+    } else {
+        noResults.style.display = 'none'
+    }
 }
 
 
-
-
 steamApp.slideOutNav = () =>{
-    const navItems = document.querySelector('.navUlItems')
+    const navItems = document.querySelector('.navUl')
     const closeIcon = document.querySelector('.closeIcon');
     const hamburgerIcon = document.querySelector('.hamburgerIcon');
     const slideOutNav = document.querySelector('.slideOutNav');
     
     const toggleMenu = () => {
-        if(navItems.classList.contains('showSlideOut')){
-            navItems.classList.remove('showSlideOut');
+        if(navItems.classList.contains('active')){
+            navItems.classList.remove('active');
             closeIcon.style.display = 'none';
             hamburgerIcon.style.display = 'block';
         } else{
-            navItems.classList.add('showSlideOut');
+            navItems.classList.add('active');
             closeIcon.style.display = 'block';
             hamburgerIcon.style.display = 'none'
         }

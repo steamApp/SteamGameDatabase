@@ -294,7 +294,7 @@ label {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.navBar .navUlItems {
+.navBar .navUl {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -310,14 +310,14 @@ label {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.navBar .navUlItems a {
+.navBar .navUl a {
   text-decoration: none;
   color: rgb(174, 247, 142);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-.navBar .navUlItems a:hover {
+.navBar .navUl a:hover {
   text-decoration: underline;
 }
 .navBar .slideOutNav {
@@ -362,7 +362,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../../assets/consoles.png);
+  background-image: url("../assets/consoles.png");
   background-color: rgb(21, 50, 67);
 }
 
@@ -477,14 +477,8 @@ header {
   color: rgb(204, 224, 223);
 }
 
-.noResultsHidden {
-  display: none;
-}
-
 .noResults {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -595,26 +589,51 @@ input {
     width: 100%;
   }
 }
-@media (max-width: 1300px) {
-  .navBar .navUlItems {
-    width: 30%;
+@media (max-width: 700px) {
+  .navBar .navUl {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 64px;
+    left: -100px;
+    background-color: #171a21;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0;
   }
-  .navBar .navUlItems #language {
-    margin-right: 5%;
+  .navBar .navUl.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 64px;
+    left: 0px;
+    height: 91vh;
   }
-}
-@media (max-width: 900px) {
-  .navBar .navUlItems {
-    width: 45%;
+  .navBar .navUl.active a {
+    display: block;
+    text-decoration: none;
+    color: rgb(174, 247, 142);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2rem;
   }
-}
-@media (max-width: 700px) {
-  .navBar .navUlItems #language,
-#cart {
-    display: none;
+  .navBar .navUl.active a:hover {
+    text-decoration: underline;
   }
   .navBar .slideOutNav {
     display: block;
@@ -627,17 +646,5 @@ input {
     font-size: 2rem;
     cursor: pointer;
     color: rgb(174, 247, 142);
-  }
-  .showMenu {
-    z-index: 99;
-    background: black;
-    color: rgb(174, 247, 142);
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-    position: fixed;
   }
 }
