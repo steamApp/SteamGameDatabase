@@ -321,9 +321,6 @@ label {
   text-decoration: underline;
 }
 .navBar .slideOutNav {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  background-color: white;
   cursor: pointer;
   display: none;
   color: rgb(174, 247, 142);
@@ -646,5 +643,17 @@ input {
     font-size: 2rem;
     cursor: pointer;
     color: rgb(174, 247, 142);
+  }
+  .showMenu {
+    z-index: 99;
+    background: black;
+    color: rgb(174, 247, 142);
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    position: fixed;
   }
 }
