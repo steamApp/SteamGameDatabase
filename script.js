@@ -110,6 +110,7 @@ steamApp.displayGame = (gamesList) => {
         
     });
 
+    // Pass through gamesList.length to steamApp.noResults which is in steamApp.storeSearch
     steamApp.noResults(gamesList.length);
 }
 
