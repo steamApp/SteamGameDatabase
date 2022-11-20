@@ -3,9 +3,13 @@
 @media (max-width: 770px) {
     #searchBar {
         flex-direction: column;
+        gap: 15px;
             input {
                 margin: 0 auto;
                 width: 100%;
+                    &::placeholder {
+                        text-align: center;
+                    }
             }
 
             select {

@@ -103,24 +103,19 @@ steamApp.noResults = (emptyList) => {
 
 
 steamApp.slideOutNav = () =>{
-    const navItems = document.querySelector('.navUl')
+    const navUl = document.querySelector('.navUl')
     const closeIcon = document.querySelector('.closeIcon');
     const hamburgerIcon = document.querySelector('.hamburgerIcon');
     const slideOutNav = document.querySelector('.slideOutNav');
     
     const toggleMenu = () => {
-        if(navItems.classList.contains('active')){
-            navItems.classList.remove('active');
-            closeIcon.style.display = 'none';
-            hamburgerIcon.style.display = 'block';
-        } else{
-            navItems.classList.add('active');
-            closeIcon.style.display = 'block';
-            hamburgerIcon.style.display = 'none'
-        }
+        navUl.classList.toggle('active');
+        hamburgerIcon.classList.toggle('active');
+        closeIcon.classList.toggle('active');
     }
 
     slideOutNav.addEventListener('click', toggleMenu);
+
 }
 
 steamApp.init = () => {

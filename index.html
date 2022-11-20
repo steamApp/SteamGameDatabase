@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <!-- Skip Link -->
     <a href="#mainContent" class="skipLink">Skip to main content.</a>
 
+    <!-- Header -->
     <header>
+        <!-- Main Nav -->
         <nav class="navBar">
             <div class="wrapper navFlex">
                 <h2 class="navLogo">Steam App</h2>
@@ -20,43 +23,48 @@
                     <li><a href="#" class="navItem" id="cart">Cart</a></li>
                 </ul>
 
+                <!-- Hamburger Menu at min-width: 700px -->
                 <button class="slideOutNav">
-                    <!-- sharp corners -->
                     <i class="fa-sharp fa-solid fa-bars hamburgerIcon"></i>
-
-                    <!-- X -->
                     <i class="fa-solid fa-x closeIcon"></i>
                 </button>
-            </div>
-        </nav> <!-- End of nav-->
+            </div><!--END .wrapper .navFlex-->
+        </nav>
     
         <div class="wrapper h1Container">
             <h1 class="mainHeader">Welcome to our website!</h1>
-        </div>
+        </div><!--END .wrapper .h1Container-->
     </header>
     
+    <!-- Main -->
     <main id="mainContent">
+        <!-- Form Section -->
         <section class="formSection">
             <div class="wrapper">
+                <!-- Form -->
                 <form action="#" id="searchBar">
-                        <label for="currency">Currency:</label>
-                        <select name="currency" id="currency">
-                            <option value="CA" id="currencyOption">CAD</option>
-                            <option value="US" id="currencyOption">USD</option>
-                            <option value="GB" id="currencyOption" currency="£">GBP</option>
-                        </select>
-
-                        <label for="search">Search:</label>
-                        <input type="search" id="search" name="search" placeholder="Search for a game here!">
+                    <!-- Currency Select -->
+                    <label for="currency">Currency:</label>
+                    <select name="currency" id="currency">
+                        <option value="CA" id="currencyOption">CAD</option>
+                        <option value="US" id="currencyOption">USD</option>
+                        <option value="GB" id="currencyOption" currency="£">GBP</option>
+                    </select>
+                    <!-- Search Bar -->
+                    <label for="search">Search:</label>
+                    <input type="search" id="search" name="search" placeholder="Search for a game here!">
                 </form>
             </div>
         </section>
 
+        <!-- Games Section -->
         <section class="gamesSection">
             <div class="wrapper">
+                <!-- Error Message -->
                 <div class="noResults">
                     <h3>Oops! We couldn't find anything. Try another search.</h3>
                 </div>
+                <!-- User Search Results -->
                 <div class="results">
                     <ul class="gamesUl">
                         <!-- JS Pseudo Code -->
@@ -73,17 +81,19 @@
                             </ul>
                         </li> -->
                     </ul>
-                </div>
-            </div>
-
+                </div><!--END .results-->
+            </div><!--END .wrapper-->
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="wrapper footerContainer">
             <p><a href="https://junocollege.com/" class="footer">Created at Juno College</a></p>
-        </div>
+        </div><!--END .wrapper .footerContainer-->
     </footer>
+
+    <!-- Script Tags -->
     <script src="./script.js"></script>
 </body>
 </html>

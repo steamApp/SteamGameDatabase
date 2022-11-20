@@ -317,19 +317,9 @@ label {
       -ms-flex-align: center;
           align-items: center;
 }
-.navBar .navUl a:hover {
+.navBar .navUl a:hover,
+.navBar .navUl a:focus {
   text-decoration: underline;
-}
-.navBar .slideOutNav {
-  cursor: pointer;
-  display: none;
-  color: rgb(174, 247, 142);
-}
-.navBar .slideOutNav .hamburgerIcon {
-  display: visible;
-}
-.navBar .slideOutNav .closeIcon {
-  display: none;
 }
 
 .slideOutNav {
@@ -576,10 +566,26 @@ input {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 15px;
   }
   #searchBar input {
     margin: 0 auto;
     width: 100%;
+  }
+  #searchBar input::-webkit-input-placeholder {
+    text-align: center;
+  }
+  #searchBar input::-moz-placeholder {
+    text-align: center;
+  }
+  #searchBar input:-ms-input-placeholder {
+    text-align: center;
+  }
+  #searchBar input::-ms-input-placeholder {
+    text-align: center;
+  }
+  #searchBar input::placeholder {
+    text-align: center;
   }
   #searchBar select {
     margin: 0 auto;
@@ -637,23 +643,22 @@ input {
     background-color: #171a21;
     border: none;
   }
-  .navBar .slideOutNav .hamburgerIcon,
-.navBar .slideOutNav .closeIcon {
-    display: visible;
+  .navBar .slideOutNav .hamburgerIcon {
+    display: block;
     font-size: 2rem;
     cursor: pointer;
     color: rgb(174, 247, 142);
   }
-  .showMenu {
-    z-index: 99;
-    background: black;
+  .navBar .slideOutNav .closeIcon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
     color: rgb(174, 247, 142);
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s;
-    position: fixed;
+  }
+  .navBar .slideOutNav .hamburgerIcon.active {
+    display: none;
+  }
+  .navBar .slideOutNav .closeIcon.active {
+    display: block;
   }
 }
