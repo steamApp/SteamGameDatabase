@@ -120,6 +120,7 @@ steamApp.hamburgerMenu = () =>{
     const menu = document.querySelector('.hamburgerMenu');
     
     // Toggle .active classes on hamburger menu to change display
+    // Learned about .toggle and .active from Shannon from cohort 42 (:
     const toggleMenu = () => {
         navUl.classList.toggle('active');
         hamburgerIcon.classList.toggle('active');

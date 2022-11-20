@@ -9,13 +9,32 @@ header {
 
 }
 
-.h1Container {
+.header {
     height: 100%;
+}
+
+.headerFlex {
     display: flex;
     justify-content: center;
+    
+
+}
+
+.welcome {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-        h1 {
-            margin: 0 auto;
-            text-align: center;
-        }
+    gap: 30px;
+}
+
+.instructions {
+    width: fit-content;
+    li {
+        margin: 0 auto;
+            h5 {
+                margin: 10px auto;
+            }
+    }
 }

@@ -250,6 +250,9 @@ html {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
 a {
   font-family: "Anybody", cursive, "Lato", sans-serif;
@@ -338,6 +341,7 @@ img {
 
 ul {
   list-style: none;
+  padding-left: 0px;
 }
 
 header {
@@ -353,21 +357,47 @@ header {
   background-color: rgb(21, 50, 67);
 }
 
-.h1Container {
+.header {
   height: 100%;
+}
+
+.headerFlex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.welcome {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 30px;
 }
-.h1Container h1 {
+
+.instructions {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.instructions li {
   margin: 0 auto;
-  text-align: center;
+}
+.instructions li h5 {
+  margin: 10px auto;
 }
 
 .gamesSection {
