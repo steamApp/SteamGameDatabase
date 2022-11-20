@@ -21,20 +21,24 @@ header {
 }
 
 .welcome {
-    height: 100%;
+    margin-top: 15%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 30px;
 }
 
-.instructions {
-    width: fit-content;
-    li {
-        margin: 0 auto;
-            h5 {
-                margin: 10px auto;
+.instructionsContainer {
+    display: flex;
+    justify-content: center;
+        .instructions {
+            width: fit-content;
+            li {
+                    h5 {
+                        margin: 10px auto;
+                    }
             }
-    }
+        }
+
 }

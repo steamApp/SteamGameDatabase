@@ -1,0 +1,10 @@
+@use "../variables";
+
+@media (max-width: 400px) {
+    .welcome {
+        gap: 10px;
+            h1 {
+                font-size: 1.5rem;
+            }
+    }
+}

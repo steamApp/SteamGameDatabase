@@ -259,6 +259,10 @@ a {
   color: rgb(204, 224, 223);
 }
 
+h1, h4 {
+  text-align: center;
+}
+
 input {
   width: 30%;
 }
@@ -371,7 +375,7 @@ header {
 }
 
 .welcome {
-  height: 100%;
+  margin-top: 15%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,24 +383,29 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
 }
 
-.instructions {
+.instructionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.instructionsContainer .instructions {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-.instructions li {
-  margin: 0 auto;
-}
-.instructions li h5 {
+.instructionsContainer .instructions li h5 {
   margin: 10px auto;
 }
 
@@ -704,5 +713,13 @@ input::placeholder {
   }
   .navBar .hamburgerMenu .closeIcon.active {
     display: block;
+  }
+}
+@media (max-width: 400px) {
+  .welcome {
+    gap: 10px;
+  }
+  .welcome h1 {
+    font-size: 1.5rem;
   }
 }
