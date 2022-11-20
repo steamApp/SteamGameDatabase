@@ -113,11 +113,11 @@ steamApp.noResults = (emptyList) => {
 }
 
 // Hamburger Menu
-steamApp.slideOutNav = () =>{
+steamApp.hamburgerMenu = () =>{
     const navUl = document.querySelector('.navUl')
     const closeIcon = document.querySelector('.closeIcon');
     const hamburgerIcon = document.querySelector('.hamburgerIcon');
-    const slideOutNav = document.querySelector('.slideOutNav');
+    const menu = document.querySelector('.hamburgerMenu');
     
     // Toggle .active classes on hamburger menu to change display
     const toggleMenu = () => {
@@ -126,13 +126,13 @@ steamApp.slideOutNav = () =>{
         closeIcon.classList.toggle('active');
     }
 
-    slideOutNav.addEventListener('click', toggleMenu);
-
+    menu.addEventListener('click', toggleMenu);
 }
 
+// Init
 steamApp.init = () => {
     steamApp.storeSearch("CA");
-    steamApp.slideOutNav();
+    steamApp.hamburgerMenu();
 }
 
 steamApp.init();
