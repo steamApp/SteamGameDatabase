@@ -9,7 +9,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    // border: 2px solid red;
 }
 
 label {
@@ -32,4 +31,7 @@ input {
     margin-left: 1%;
     border-radius: 8px;
     border: 2px solid variables.$green;
+        &::placeholder {
+            text-align: center;
+        }
 }
