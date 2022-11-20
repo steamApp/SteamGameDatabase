@@ -34,8 +34,20 @@ steamApp.storeSearch = () => {
 
         // Clear input after every search
         inputElement.value = ''
+        
+        // Error message
+        steamApp.noResults = (listLength) => {
+            const userError = document.querySelector('.userError')
+            const noGames = listLength;
+            const noResults = document.querySelector('.noResults')
+            if (noGames === 0) {
+                noResults.style.display = 'flex'
+                userError.innerHTML = `"${userSearch}"`
 
-
+            } else {
+                noResults.style.display = 'none'
+            }
+        }
     })
 }
 
@@ -98,19 +110,9 @@ steamApp.displayGame = (gamesList) => {
         
     });
 
-    steamApp.noResults(gamesList);
+    steamApp.noResults(gamesList.length);
 }
 
-// Error message
-steamApp.noResults = (emptyList) => {
-    const noGames = emptyList;
-    const noResults = document.querySelector('.noResults')
-    if (noGames.length === 0) {
-        noResults.style.display = 'flex'
-    } else {
-        noResults.style.display = 'none'
-    }
-}
 
 // Hamburger Menu
 steamApp.hamburgerMenu = () =>{
