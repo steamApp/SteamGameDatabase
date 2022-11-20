@@ -2,15 +2,20 @@ const steamApp = {};
 
 steamApp.storeSearch = () => {
 
+    // Event Listener for userSearch and userCurrency
     const formElement = document.querySelector('#searchBar')
     formElement.addEventListener('submit', function (event) {
         event.preventDefault();
+
+        // Grab user search input
         const inputElement = document.querySelector('input');
         const userSearch = inputElement.value;
 
+        // Grab user currency selection
         const selectElement = document.querySelector('#currency')
         const userCurrency = selectElement.value;
 
+        // API Call
         const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
 
         url.search = new URLSearchParams({
@@ -25,9 +30,9 @@ steamApp.storeSearch = () => {
             })
             .then((data) => {
                 steamApp.displayGame(data.items);
-                // console.log(data.items);
             })
 
+        // Clear input after every search
         inputElement.value = ''
 
 
@@ -36,9 +41,11 @@ steamApp.storeSearch = () => {
 
 steamApp.displayGame = (gamesList) => {
 
+    // Clear gamesUl at the begining of each new user search
     document.querySelector('.gamesUl').innerHTML = '';
     gamesList.forEach((game) => {
 
+        // Create innerHTML for the li where the games info will be shown
         const newLiElement = document.createElement('li');
         newLiElement.classList.add('newLiElement');
         newLiElement.innerHTML = `
@@ -46,11 +53,10 @@ steamApp.displayGame = (gamesList) => {
         <h2><a href="https://store.steampowered.com/app/${game.id}" target="_blank">${game.name}</a></h2>
         `;
 
+
+        // Selecting user selection for Currency and displaying it on the page
         const selectElement = document.querySelector('#currency')
-        
-
         const gamePriceEl = document.createElement('p');
-
         const getPrice = (gamePrice) => {
             if (selectElement.value === "GB" && gamePrice) {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}"  >£${((gamePrice.final) / 100).toFixed(2)}</a>`;
@@ -60,18 +66,21 @@ steamApp.displayGame = (gamesList) => {
                 gamePriceEl.innerHTML = `<a href="https://store.steampowered.com/app/${game.id}" target="_blank">Click Here For Pricing</a>`;
             }
         }
-        
         getPrice(game.price);
+
+        //Appending games and prices
         const gamesUl = document.querySelector('.gamesUl');
         gamesUl.append(newLiElement);
         newLiElement.append(gamePriceEl);
 
+        // Creating ul and li for game platforms
         const platformsUl = document.createElement('ul')
         platformsUl.classList.add('platformsUl');
         const windowsIcon = document.createElement('li')
         const macIcon = document.createElement('li')
         const linuxIcon = document.createElement('li')
 
+        // Checking for platforms on each game
         if (game.platforms.windows === true) {
             windowsIcon.innerHTML = '<i class="fa-brands fa-windows"></i>'
             platformsUl.append(windowsIcon);
@@ -84,6 +93,7 @@ steamApp.displayGame = (gamesList) => {
             platformsUl.append(linuxIcon);
         }
 
+        // Append platforms to games
         newLiElement.append(platformsUl)
         
     });
@@ -91,6 +101,7 @@ steamApp.displayGame = (gamesList) => {
     steamApp.noResults(gamesList);
 }
 
+// Error message
 steamApp.noResults = (emptyList) => {
     const noGames = emptyList;
     const noResults = document.querySelector('.noResults')
@@ -101,13 +112,14 @@ steamApp.noResults = (emptyList) => {
     }
 }
 
-
+// Hamburger Menu
 steamApp.slideOutNav = () =>{
     const navUl = document.querySelector('.navUl')
     const closeIcon = document.querySelector('.closeIcon');
     const hamburgerIcon = document.querySelector('.hamburgerIcon');
     const slideOutNav = document.querySelector('.slideOutNav');
     
+    // Toggle .active classes on hamburger menu to change display
     const toggleMenu = () => {
         navUl.classList.toggle('active');
         hamburgerIcon.classList.toggle('active');
