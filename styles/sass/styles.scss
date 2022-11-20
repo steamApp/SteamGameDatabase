@@ -2,12 +2,21 @@
 @use "./partials/variables";
 @use "./partials/setup";
 @use "./partials/typography";
-@use "./partials/nav";
 @use "./partials/global";
+
+// Header + Nav
 @use "./partials/header";
-@use "./partials/gamesList";
-@use "./partials/footer";
+@use "./partials/nav";
+
+// Forms Section
 @use "./partials/searchBar";
+
+// Games Section
+@use "./partials/gamesList";
+
+// Footer
+@use "./partials/footer";
+
 
 // Media Queries
 @use "./partials/mediaQueries/gamesListMediaQueries";

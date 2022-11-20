@@ -1,9 +1,10 @@
 @use "./variables";
 
+// Nav Bar
 .navBar{
     width: 100%;
     display: flex;
-    background-color: variables.$steamNav;
+    background-color: variables.$steamBlack;
         .navFlex {
             display: flex;
             justify-content: space-between;
@@ -27,10 +28,11 @@
                     a:focus {
                         text-decoration: underline;
                     }
-                }
-                
             }
-            
+                
+}
+
+// Hamburger Menu
 .hamburgerMenu {
-    display: none;
+display: none;
 }

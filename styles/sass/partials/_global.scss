@@ -1,14 +1,12 @@
 @use "./variables";
 
-// body{
-//     background-color: variables.$darkBlue;
-// }
-
+// Wrapper
 .wrapper{
     width: 80%;
     margin: 0 auto;
 }
 
+// Global Styles
 img {
     max-width: 100%;
     display: block;

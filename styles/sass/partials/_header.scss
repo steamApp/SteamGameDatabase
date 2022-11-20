@@ -1,5 +1,6 @@
 @use "./variables";
 
+// Header Styles
 header {
     height: 70vh;
     display: flex;
@@ -9,10 +10,6 @@ header {
 
 }
 
-.header {
-    height: 100%;
-}
-
 .headerFlex {
     display: flex;
     justify-content: center;
@@ -20,6 +17,7 @@ header {
 
 }
 
+// Welcome Message
 .welcome {
     margin-top: 15%;
     display: flex;
@@ -29,6 +27,7 @@ header {
     gap: 30px;
 }
 
+// Instructions
 .instructionsContainer {
     display: flex;
     justify-content: center;

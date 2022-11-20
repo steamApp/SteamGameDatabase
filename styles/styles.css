@@ -286,6 +286,78 @@ label {
   color: rgb(174, 247, 142);
 }
 
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+header {
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url("../assets/consoles.png");
+  background-color: rgb(21, 50, 67);
+}
+
+.headerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.welcome {
+  margin-top: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+.instructionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.instructionsContainer .instructions {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.instructionsContainer .instructions li h5 {
+  margin: 10px auto;
+}
+
 .navBar {
   width: 100%;
   display: -webkit-box;
@@ -333,80 +405,59 @@ label {
   display: none;
 }
 
-.wrapper {
-  width: 80%;
-  margin: 0 auto;
+.formSection {
+  background-color: #171a21;
+  padding: 25px 0;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0px;
-}
-
-header {
-  height: 70vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-image: url("../assets/consoles.png");
-  background-color: rgb(21, 50, 67);
-}
-
-.header {
-  height: 100%;
-}
-
-.headerFlex {
+#searchBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.welcome {
-  margin-top: 15%;
+label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 30px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
-.instructionsContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+select {
+  padding: 5px 20px;
+  min-width: 8%;
+  border-radius: 8px;
+  border: none;
+  margin: 0 3% 0 1%;
+  border: 2px solid rgb(174, 247, 142);
 }
-.instructionsContainer .instructions {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+
+input {
+  min-width: 50%;
+  margin-left: 1%;
+  border-radius: 8px;
+  border: 2px solid rgb(174, 247, 142);
 }
-.instructionsContainer .instructions li h5 {
-  margin: 10px auto;
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+input::-moz-placeholder {
+  text-align: center;
+}
+input:-ms-input-placeholder {
+  text-align: center;
+}
+input::-ms-input-placeholder {
+  text-align: center;
+}
+input::placeholder {
+  text-align: center;
 }
 
 .gamesSection {
@@ -527,61 +578,6 @@ footer .footerContainer {
 footer .footerContainer a {
   text-decoration: none;
   color: rgb(174, 247, 142);
-}
-
-.formSection {
-  background-color: #171a21;
-  padding: 25px 0;
-}
-
-#searchBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-select {
-  padding: 5px 20px;
-  min-width: 8%;
-  border-radius: 8px;
-  border: none;
-  margin: 0 3% 0 1%;
-  border: 2px solid rgb(174, 247, 142);
-}
-
-input {
-  min-width: 50%;
-  margin-left: 1%;
-  border-radius: 8px;
-  border: 2px solid rgb(174, 247, 142);
-}
-input::-webkit-input-placeholder {
-  text-align: center;
-}
-input::-moz-placeholder {
-  text-align: center;
-}
-input:-ms-input-placeholder {
-  text-align: center;
-}
-input::-ms-input-placeholder {
-  text-align: center;
-}
-input::placeholder {
-  text-align: center;
 }
 
 @media (max-width: 1000px) {

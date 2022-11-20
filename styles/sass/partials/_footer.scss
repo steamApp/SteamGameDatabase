@@ -1,7 +1,8 @@
 @use "./variables";
 
+// Footer Styles
 footer {
-    background-color: variables.$steamNav;
+    background-color: variables.$steamBlack;
     padding: 1% 0;
 
     .footerContainer {

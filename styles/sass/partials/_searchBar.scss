@@ -1,10 +1,12 @@
 @use "./variables";
 
+// Form
 .formSection {
-    background-color: variables.$steamNav;
+    background-color: variables.$steamBlack;
     padding: 25px 0;
 }
 
+// Search Bar
 #searchBar{
     display: flex;
     justify-content: center;

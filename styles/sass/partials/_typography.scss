@@ -31,7 +31,7 @@ input{
 
 select,
 option{
-    color: variables.$steamNav;
+    color: variables.$steamBlack;
 }
 
 select{
@@ -40,8 +40,7 @@ select{
 
 #currencyOption,
 option{
-    font-family: 'Lato', sans-serif;
-    // font-family: 'Anybody', cursive;    
+    font-family: 'Lato', sans-serif; 
 }
 
 label{

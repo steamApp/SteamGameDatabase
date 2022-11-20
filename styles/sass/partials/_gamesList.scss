@@ -1,11 +1,13 @@
 @use "./variables";
 
+// Games Section
 .gamesSection {
     background: linear-gradient(variables.$darkBlue, variables.$gradientBlue);
-    border: 2px solid variables.$steamNav;
+    border: 2px solid variables.$steamBlack;
     min-height: 13vh;
 }
 
+// Games ul + li
 .gamesUl {
     display: flex;
     flex-direction: column;
@@ -41,6 +43,7 @@
         }
 }
 
+// Games Info Flex Order
 .newLiElement p {
     order: 2;
     font-size: 1.2rem;
@@ -58,7 +61,8 @@
             text-decoration: none;
         }
 }
-    
+
+// Platforms Styles   
 .platformsUl {
 width: 50%;
 display: flex;
@@ -74,6 +78,7 @@ padding-left: 0;
     }
 }
 
+// Error Message Styles
 .noResults {
     display: none;
     justify-content: center;
