@@ -1,3 +1,5 @@
+// API: https://github.com/Revadike/InternalSteamWebAPI/wiki/Search-Store
+
 const steamApp = {};
 
 steamApp.storeSearch = () => {
