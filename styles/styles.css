@@ -358,6 +358,13 @@ header {
   margin: 10px auto;
 }
 
+.navLogo a {
+  text-decoration: none;
+}
+.navLogo a:hover, .navLogo a:focus {
+  color: rgb(174, 247, 142);
+}
+
 .navBar {
   width: 100%;
   display: -webkit-box;
@@ -396,8 +403,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.navBar .navUl a:hover,
-.navBar .navUl a:focus {
+.navBar .navUl a:hover, .navBar .navUl a:focus {
   text-decoration: underline;
 }
 
@@ -578,6 +584,9 @@ footer .footerContainer {
 footer .footerContainer a {
   text-decoration: none;
   color: rgb(174, 247, 142);
+}
+footer .footerContainer a:hover, footer .footerContainer a:focus {
+  text-decoration: underline;
 }
 
 @media (max-width: 1000px) {

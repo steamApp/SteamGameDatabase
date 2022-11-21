@@ -11,6 +11,10 @@ footer {
             a {
                 text-decoration: none;
                 color: variables.$green;
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
+                    }
             }
     }
 }
