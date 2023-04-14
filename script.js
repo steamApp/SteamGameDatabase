@@ -18,7 +18,7 @@ steamApp.storeSearch = () => {
         const userCurrency = selectElement.value;
 
         // API Call
-        const url = new URL('https://proxy-ugwolsldnq-uc.a.run.app/https://store.steampowered.com/api/storesearch')
+        const url = new URL('https://proxy.junocollege.com/https://store.steampowered.com/api/storesearch')
 
         url.search = new URLSearchParams({
             term: userSearch,
